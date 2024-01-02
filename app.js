@@ -88,14 +88,13 @@ var editTask=function(){
   var containsClass=listItem.classList.contains("editMode");
     //If class of the parent is .editmode
   if(containsClass){
-
-        //switch to .editmode
-        //label becomes the inputs value.
-      label.innerText=editInput.value;
-      editBtn.innerText="Edit";
+    //switch to .editmode
+    //label becomes the inputs value.
+    label.innerText=editInput.value;
+    editBtn.innerText="Edit";
   }else{
-      editInput.value=label.innerText;
-      editBtn.innerText="Save";
+    editInput.value=label.innerText;
+    editBtn.innerText="Save";
   }
 
     //toggle .editmode on the parent.
@@ -171,7 +170,6 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 //cycle over incompleteTaskHolder ul list items
 //for each list item
 for (var i=0; i<incompleteTaskHolder.children.length;i++){
-
     //bind events to list items chldren(tasksCompleted)
   bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 }
@@ -181,7 +179,7 @@ for (var i=0; i<incompleteTaskHolder.children.length;i++){
 
 //cycle over completedTasksHolder ul list items
 for (var i=0; i<completedTasksHolder.children.length;i++){
-    //bind events to list items chldren(tasksIncompleted)
+  //bind events to list items chldren(tasksIncompleted)
   bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
 
